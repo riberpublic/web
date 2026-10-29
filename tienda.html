@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Manrope",system-ui,sans-serif;color:#16314f;background:#fbfcfe;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+@keyframes rbp-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:860px){
+  #rbp-header > div{height:64px !important}
+  #rbp-header nav{display:none !important}
+  #rbp-header a[href="tienda.html"]{display:none !important}
+  #rbp-mnav-btn{display:inline-flex !important}
+  #rbp-root [style*="grid-template-columns"]{grid-template-columns:1fr !important}
+  #rbp-root [data-stack]{flex-direction:column !important;align-items:stretch !important}
+}
+@media(min-width:861px){#rbp-mnav{display:none !important}}
+</style>
+</helmet>
+<div id="rbp-root" style="position:relative">
+
+<header id="rbp-header" style="position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(28,58,94,0);transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:78px;color:#fff">
+    <a href="index.html" aria-label="Riberpublic SLS" style="display:flex;align-items:center"><img src="img/logo.png" alt="Riberpublic SLS" style="height:42px;width:auto;display:block"></a>
+    <nav><ul style="display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0">
+      <li><a href="index.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="Home">Inicio</a></li>
+      <li><a href="nosotros.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="About">Nosotros</a></li>
+      <li><a href="tienda.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:1;transition:opacity .2s" data-en="Shop">Tienda online</a></li>
+      <li><a href="rsc.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="CSR">RSC</a></li>
+      <li><a href="blog.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="Blog">Blog</a></li>
+      <li><a href="contacto.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="Contact">Contacto</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <button id="rbp-lang" aria-label="Cambiar idioma" style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.06);border-radius:40px;padding:7px 14px;font-family:inherit;font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#fff;cursor:pointer;transition:.25s" style-hover="background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.7)"><span style="width:7px;height:7px;border-radius:50%;background:#e7b53c;display:inline-block"></span><span id="rbp-lang-label">EN</span></button>
+      <a href="contacto.html" style="border:1.5px solid rgba(255,255,255,.55);border-radius:40px;padding:9px 22px;font-size:.82rem;font-weight:600;color:#fff;transition:.25s" style-hover="background:#fff;color:#1c3a5e;border-color:#fff" data-en="Contact us">Contacta</a>
+    </div>
+  </div>
+</header>
+
+<section style="position:relative;color:#fff;overflow:hidden;padding:160px 0 80px;background:radial-gradient(120% 130% at 82% 8%,rgba(94,128,170,.4),transparent 55%),linear-gradient(135deg,#132a47,#1c3a5e 55%,#2d5481)">
+  <div style="position:absolute;top:0;left:0;width:220px;height:220px;background:linear-gradient(135deg,#5a47b8,transparent 70%);opacity:.5;clip-path:polygon(0 0,100% 0,0 100%);pointer-events:none"></div>
+  <div data-parallax="0.22" style="position:absolute;top:40px;right:8%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(90,71,184,.55),transparent 70%);filter:blur(8px);animation:rbp-float 9s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 24px">
+    <span data-reveal style="display:inline-block;font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#9db6d4;border:1px solid rgba(157,182,212,.4);border-radius:40px;padding:7px 16px" data-en="Online shop">Tienda online</span>
+    <h1 data-reveal data-delay="90" style="font-family:'Playfair Display',Georgia,serif;font-weight:800;letter-spacing:-.01em;font-size:clamp(2.4rem,6vw,3.9rem);margin:18px 0 14px;line-height:1.05" data-en="Services and products">Servicios y productos</h1>
+    <p data-reveal data-delay="180" style="color:#d6e0ee;max-width:62ch;font-size:1.06rem" data-en="Sustainable merchandising and marketing services for companies, events and schools. Every item is designed to be kind to the environment.">Merchandising sostenible y servicios de marketing para empresas, eventos y centros educativos. Todos nuestros artículos están pensados para ser respetuosos con el medio ambiente.</p>
+    <div data-reveal data-delay="240" style="font-size:.78rem;color:#9db6d4;margin-top:22px;letter-spacing:.03em"><a href="index.html" style="color:#cfe0f2" data-en="Home">Inicio</a> · <span data-en="Online shop">Tienda online</span></div>
+  </div>
+</section>
+
+<section style="padding:90px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div data-reveal style="max-width:680px;margin-bottom:46px">
+      <span style="font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#5e80aa" data-en="Services">Servicios</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;letter-spacing:-.01em;font-size:clamp(2rem,4.4vw,3.1rem);margin-top:14px;line-height:1.06" data-en="We help you leave a mark">Te ayudamos a dejar huella</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <article data-reveal data-delay="0" style="background:#fff;border:1px solid #d8e1ec;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s" style-hover="transform:translateY(-8px);box-shadow:0 28px 56px rgba(28,58,94,.16);border-color:transparent">
+        <figure style="position:relative;aspect-ratio:16/9;background:linear-gradient(140deg,#1c3a5e,#2d5481);overflow:hidden;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 200 110" width="62%" fill="none" stroke="rgba(255,255,255,.92)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="30" y1="88" x2="120" y2="88" opacity=".4"/><rect x="38" y="64" width="14" height="24" fill="rgba(255,255,255,.18)"/><rect x="60" y="48" width="14" height="40" fill="rgba(255,255,255,.26)"/><rect x="82" y="32" width="14" height="56" fill="rgba(255,255,255,.34)"/><polyline points="45,58 67,42 89,26" stroke="#9db6d4" stroke-width="2.4"/><circle cx="150" cy="50" r="24" stroke-width="3"/><line x1="168" y1="68" x2="184" y2="84" stroke-width="4"/></svg></figure>
+        <div style="padding:24px;display:flex;flex-direction:column;flex:1">
+          <span style="font-size:.7rem;letter-spacing:.16em;color:#5e80aa;font-weight:700;text-transform:uppercase">S001</span>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:#16314f;margin:6px 0" data-en="Market analysis">Análisis de mercado</h3>
+          <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:#1c3a5e;margin:2px 0 12px">800 €</div>
+          <p style="color:#6b7e95;font-size:.9rem;margin-bottom:18px" data-en="Complete market research with insights on consumer behaviour, sector trends and competitor analysis. Detailed reports to make informed decisions.">Estudios de mercado completos con información sobre el comportamiento del consumidor, las tendencias del sector y el análisis de la competencia. Informes detallados para tomar decisiones informadas.</p>
+          <a href="https://buybuttons.sefed.es/buybuttons/es01rbp0315/btn/de52dd72-797f-46c2-8c34-2ea7c53ae822/" target="_blank" rel="noopener" style="margin-top:auto;justify-content:center;display:inline-flex;align-items:center;gap:9px;border-radius:44px;padding:13px 26px;font-weight:600;font-size:.9rem;background:#1c3a5e;color:#fff;transition:background .25s" style-hover="background:#2d5481" data-en="Add to cart">Añadir al carrito</a>
+        </div>
+      </article>
+      <article data-reveal data-delay="120" style="background:#fff;border:1px solid #d8e1ec;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s" style-hover="transform:translateY(-8px);box-shadow:0 28px 56px rgba(28,58,94,.16);border-color:transparent">
+        <figure style="position:relative;aspect-ratio:16/9;background:linear-gradient(140deg,#1c3a5e,#2d5481);overflow:hidden;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 200 110" width="62%" fill="none" stroke="rgba(255,255,255,.92)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="34" y="24" width="132" height="64" rx="7" fill="rgba(255,255,255,.05)"/><line x1="34" y1="40" x2="166" y2="40" opacity=".35"/><circle cx="44" cy="32" r="2" fill="rgba(255,255,255,.5)" stroke="none"/><circle cx="52" cy="32" r="2" fill="rgba(255,255,255,.5)" stroke="none"/><path d="M52 76 a26 26 0 0 1 40 -18" stroke="#9db6d4" stroke-width="4"/><rect x="112" y="60" width="12" height="16" fill="rgba(255,255,255,.24)"/><rect x="130" y="48" width="12" height="28" fill="rgba(255,255,255,.34)"/></svg></figure>
+        <div style="padding:24px;display:flex;flex-direction:column;flex:1">
+          <span style="font-size:.7rem;letter-spacing:.16em;color:#5e80aa;font-weight:700;text-transform:uppercase">S002</span>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:#16314f;margin:6px 0" data-en="Company analysis">Análisis de empresa</h3>
+          <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:#1c3a5e;margin:2px 0 12px">600 €</div>
+          <p style="color:#6b7e95;font-size:.9rem;margin-bottom:18px" data-en="We analyse your brand's advertising, merchandising and digital marketing, assessing the effectiveness of your campaigns with clear, actionable recommendations.">Analizamos publicidad, merchandising y marketing digital de tu marca, evaluando la efectividad de tus campañas y el impacto de tus estrategias, con recomendaciones claras y accionables.</p>
+          <a href="https://buybuttons.sefed.es/buybuttons/es01rbp0315/btn/b4d3ab24-b4bc-4411-83b6-b7ae0c922c0d/" target="_blank" rel="noopener" style="margin-top:auto;justify-content:center;display:inline-flex;align-items:center;gap:9px;border-radius:44px;padding:13px 26px;font-weight:600;font-size:.9rem;background:#1c3a5e;color:#fff;transition:background .25s" style-hover="background:#2d5481" data-en="Add to cart">Añadir al carrito</a>
+        </div>
+      </article>
+      <article data-reveal data-delay="240" style="background:#fff;border:1px solid #d8e1ec;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s" style-hover="transform:translateY(-8px);box-shadow:0 28px 56px rgba(28,58,94,.16);border-color:transparent">
+        <figure style="position:relative;aspect-ratio:16/9;background:linear-gradient(140deg,#1c3a5e,#2d5481);overflow:hidden;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 200 110" width="62%" fill="none" stroke="rgba(255,255,255,.92)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M28 86 C 70 86, 64 50, 96 48 S 150 22, 180 16" stroke-width="2.4" stroke-dasharray="1 7" opacity=".6"/><circle cx="28" cy="86" r="8" fill="rgba(255,255,255,.08)"/><circle cx="92" cy="52" r="8" fill="rgba(255,255,255,.08)"/><circle cx="150" cy="30" r="8" fill="rgba(255,255,255,.08)"/><circle cx="180" cy="16" r="10" fill="rgba(157,182,212,.3)"/></svg></figure>
+        <div style="padding:24px;display:flex;flex-direction:column;flex:1">
+          <span style="font-size:.7rem;letter-spacing:.16em;color:#5e80aa;font-weight:700;text-transform:uppercase">S003</span>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:#16314f;margin:6px 0" data-en="Projects">Proyectos</h3>
+          <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:#1c3a5e;margin:2px 0 12px">1.200 €</div>
+          <p style="color:#6b7e95;font-size:.9rem;margin-bottom:18px" data-en="Tailored projects including advertising campaigns, merchandising strategies and digital marketing plans, aligned with your goals to build a solid, memorable brand.">Proyectos a medida que incluyen campañas publicitarias, estrategias de merchandising y planes de marketing digital, alineados con los objetivos de tu negocio para construir una marca sólida y memorable.</p>
+          <a href="https://buybuttons.sefed.es/buybuttons/es01rbp0315/btn/6bc2339a-85b7-4a14-ba48-b5db18bf087f/" target="_blank" rel="noopener" style="margin-top:auto;justify-content:center;display:inline-flex;align-items:center;gap:9px;border-radius:44px;padding:13px 26px;font-weight:600;font-size:.9rem;background:#1c3a5e;color:#fff;transition:background .25s" style-hover="background:#2d5481" data-en="Add to cart">Añadir al carrito</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="background:#eef2f7;padding:80px 0">
+  <div data-reveal style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div style="background:linear-gradient(135deg,#1c3a5e,#2d5481);color:#fff;border-radius:20px;padding:48px;text-align:center;position:relative;overflow:hidden">
+      <div data-parallax="0.12" style="position:absolute;top:-40px;right:-30px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(90,71,184,.5),transparent 70%);pointer-events:none"></div>
+      <span style="position:relative;font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#9db6d4" data-en="Featured pack">Pack destacado</span>
+      <h3 style="position:relative;font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.7rem,3.4vw,2.3rem);margin:10px 0 14px" data-en="«Write your story» pack">Pack «Escribe tu historia»</h3>
+      <p style="position:relative;color:#d6e0ee;max-width:64ch;margin:0 auto 22px" data-en="To mark International Book Day, we offer an exclusive pack with everything to develop your own adventures: a diary, a mug, a writing kit, a seed pencil, a cork pen and a calendar.">Con la llegada del Día Internacional del Libro, te ofrecemos un pack exclusivo con un conjunto de artículos para desarrollar tus propias aventuras: una agenda, una taza, un kit de escritura, un lápiz con semillas, un bolígrafo de corcho y un calendario.</p>
+      <a href="https://buybuttons.sefed.es/buybuttons/es01rbp0315/btn/8eb0048a-b021-4baa-9627-45b2be19aaf5/" target="_blank" rel="noopener" style="position:relative;display:inline-flex;align-items:center;gap:9px;border-radius:44px;padding:14px 30px;font-weight:600;font-size:.92rem;background:#fff;color:#1c3a5e;transition:transform .25s,box-shadow .25s" style-hover="transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.32)" data-en="Buy now">Compra ahora</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:90px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div data-reveal style="max-width:680px;margin-bottom:34px">
+      <span style="font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#5e80aa" data-en="Products">Productos</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;letter-spacing:-.01em;font-size:clamp(2rem,4.4vw,3.1rem);margin-top:14px;line-height:1.06" data-en="Committed to sustainability">Comprometidos con la sostenibilidad</h2>
+    </div>
+    <div data-reveal style="background:#fff;border:1px solid #d8e1ec;border-left:3px solid #5e80aa;border-radius:14px;padding:28px 30px;margin-bottom:44px">
+      <p style="color:#42566e;margin-bottom:10px" data-en="<b>At Riberpublic SLS, we are committed to sustainability!</b> All our merchandising products are designed to be environmentally friendly, using recycled, organic and durable materials that reduce ecological impact."><b style="color:#1c3a5e">¡En Riberpublic SLS, estamos comprometidos con la sostenibilidad!</b> Todos nuestros productos de merchandising están diseñados para ser respetuosos con el medio ambiente, utilizando materiales reciclados, orgánicos y duraderos que reducen el impacto ecológico.</p>
+      <p style="color:#42566e" data-en="From cloth bags and backpacks to mugs and pens, every item combines functionality with environmental responsibility. Choose products that make a difference — for you and for the planet.">Desde bolsas de tela y mochilas hasta tazas y bolígrafos, cada artículo combina funcionalidad con responsabilidad ambiental. Elige productos que marquen la diferencia, tanto para ti como para el planeta.</p>
+    </div>
+    <div id="rbp-prod-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px"></div>
+  </div>
+</section>
+
+<footer style="background:#132a47;color:#cfdbea">
+  <div style="padding:70px 0 38px">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:40px">
+      <div>
+        <img src="img/logo.png" alt="Riberpublic SLS" style="height:46px;margin-bottom:18px">
+        <p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#cfe0f2;font-size:1.05rem;margin-bottom:10px" data-en="«Leave a mark without leaving waste»">«Deja huella sin dejar residuos»</p>
+        <p style="font-size:.9rem;color:#bcccde;line-height:1.85;max-width:34ch" data-en="We are a simulated merchandising company. IES Ribera de Castilla. SEFED project.">Somos una empresa simulada de venta de merchandising. IES Ribera de Castilla. Proyecto SEFED.</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9db6d4;margin-bottom:18px" data-en="Navigation">Navegación</h4>
+        <ul style="list-style:none">
+          <li><a href="nosotros.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="About">Nosotros</a></li>
+          <li><a href="tienda.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="Shop">Tienda online</a></li>
+          <li><a href="rsc.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="CSR">RSC</a></li>
+          <li><a href="blog.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff">Blog</a></li>
+          <li><a href="contacto.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="Contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9db6d4;margin-bottom:18px" data-en="Contact">Contacto</h4>
+        <p style="font-size:.9rem;color:#bcccde;line-height:1.95;word-break:break-word"><a href="mailto:riberpublic.sefed@gmail.com" style="color:#fff;font-weight:600" style-hover="color:#9db6d4">riberpublic.sefed@gmail.com</a><br><a href="tel:983260716" style="color:#bcccde">983 260 716</a><br>Mirabel, 25<br>47010 Valladolid</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9db6d4;margin-bottom:18px" data-en="Subscribe">Suscríbete</h4>
+        <p style="font-size:.9rem;color:#bcccde;line-height:1.85" data-en="News and catalogue in your inbox.">Novedades y catálogo en tu correo.</p>
+        <form id="rbp-sub" style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
+          <input type="email" name="correo" required placeholder="Tu correo electrónico…" data-en-ph="Your email…" aria-label="Correo" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:13px 15px;color:#fff;font-family:inherit;font-size:.9rem">
+          <button type="submit" style="background:#fff;color:#1c3a5e;border:0;border-radius:10px;padding:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:.2s" style-hover="background:#5e80aa;color:#fff" data-en="Subscribe">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.1);padding:22px 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;font-size:.8rem;color:#8fa6c1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <span data-en="© 2026 Riberpublic SLS · Simulated company SEFED">© 2026 Riberpublic SLS · Empresa simulada SEFED</span>
+      <span><a href="index.html" style="color:#bcccde">riberpublic.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('rbp-root');
+    if (!root) return;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---- mobile nav (responsive) ---- */
+    (function () {
+      const row = document.querySelector('#rbp-header > div');
+      if (!row) return;
+      const actions = row.lastElementChild;
+      const burger = document.createElement('button');
+      burger.id = 'rbp-mnav-btn';
+      burger.setAttribute('aria-label', 'Menú');
+      burger.style.cssText = 'display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);border-radius:12px;color:#fff;cursor:pointer;flex:none';
+      burger.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
+      if (actions) actions.appendChild(burger);
+      const ov = document.createElement('div');
+      ov.id = 'rbp-mnav';
+      ov.style.cssText = 'position:fixed;inset:0;z-index:80;background:rgba(11,22,38,.98);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:none;flex-direction:column;padding:22px 24px';
+      const links = [['index.html', 'Inicio', 'Home'], ['nosotros.html', 'Nosotros', 'About'], ['rsc.html', 'RSC', 'CSR'], ['blog.html', 'Blog', 'Blog'], ['contacto.html', 'Contacto', 'Contact'], ['tienda.html', 'Tienda', 'Shop']];
+      ov.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;height:54px">'
+        + '<img src="img/logo.png" alt="Riberpublic" style="height:38px;width:auto">'
+        + '<button id="rbp-mnav-close" aria-label="Cerrar" style="width:42px;height:42px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);border-radius:12px;color:#fff;cursor:pointer;font-size:20px;line-height:1">\u2715</button></div>'
+        + '<nav style="display:flex;flex-direction:column;margin-top:24px">'
+        + links.map(function (l) { return '<a href="' + l[0] + '" data-en="' + l[2] + '" style="color:#fff;font-family:\'Playfair Display\',Georgia,serif;font-weight:700;font-size:1.55rem;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)">' + l[1] + '</a>'; }).join('')
+        + '</nav>';
+      root.appendChild(ov);
+      const closeMnav = function () { ov.style.display = 'none'; document.body.style.overflow = ''; };
+      burger.addEventListener('click', function () { ov.style.display = 'flex'; document.body.style.overflow = 'hidden'; });
+      const mc = ov.querySelector('#rbp-mnav-close');
+      if (mc) mc.addEventListener('click', closeMnav);
+      ov.querySelectorAll('nav a').forEach(function (a) { a.addEventListener('click', closeMnav); });
+    })();
+
+    /* ---- product catalogue (built once via DOM) ---- */
+    const products = [
+      ['M086','Pack merchandising','Merchandising pack','Nuestros mejores productos sostenibles en una sola oferta: bolsa de tela, agenda, mochila, taza, bolígrafo y gorra.','Our best sustainable products in a single offer: cloth bag, diary, backpack, mug, pen and cap.','23,40 €','f695c584-3597-4a28-945c-f116db30341d'],
+      ['M053','Bolsas de tela · pack 100','Cloth bags · pack of 100','Práctica y resistente, fabricada con materiales sostenibles. Estilo y conciencia ecológica para tus compras diarias.','Practical and sturdy, made from sustainable materials. Style and eco-awareness for your daily shopping.','140 €','23beb968-1d1c-4c40-abe4-51a9f01f4df1'],
+      ['M058','Mochila · pack 50','Backpack · pack of 50','Confeccionada con fibras recicladas, combina funcionalidad y respeto por el medio ambiente.','Made with recycled fibres, it combines functionality and respect for the environment.','170 €','c0f26776-ba90-472e-88a3-a1553ef437e7'],
+      ['M064','Taza · pack 25','Mug · pack of 25','Hecha de materiales duraderos y reutilizables, ideal para disfrutar tu bebida favorita de forma responsable.','Made from durable, reusable materials, ideal for enjoying your favourite drink responsibly.','145 €','05ea8f06-2a55-4a8f-85d1-6aa6163be980'],
+      ['M090','Bolígrafo eco · pack 100','Eco pen · pack of 100','Diseñado con plástico reciclado, una opción elegante y eco-friendly que minimiza el desperdicio.','Designed with recycled plastic, an elegant, eco-friendly option that minimises waste.','220 €','688b3a6c-c3ee-40a2-9271-6095e1834279'],
+      ['M066','Bolsas de papel · pack 200','Paper bags · pack of 200','Papel 100% reciclado, resistente y reutilizable. Practicidad con sostenibilidad.','100% recycled paper, sturdy and reusable. Practicality with sustainability.','140 €','ab691518-6c1e-4a8d-b54a-477b2d141267'],
+      ['M077','Kit de escritura · pack 50','Writing kit · pack of 50','Páginas de papel reciclado y cubierta de materiales sostenibles, perfecto para tomar notas de forma responsable.','Recycled paper pages and a cover made from sustainable materials, perfect for taking notes responsibly.','215 €','3f30442d-5b6d-40bf-bd97-3aa2b3c9525b'],
+      ['M050','Gorras · pack 50','Caps · pack of 50','Fabricada con materiales sostenibles, te protege del sol mientras promueve la conciencia ambiental con estilo.','Made from sustainable materials, it protects you from the sun while promoting environmental awareness in style.','180 €','c3b05cb1-ed7b-4153-a46f-fd0fc02381c1'],
+      ['M088','Lápiz con semilla · pack 50','Seed pencil · pack of 50','De madera sostenible, se convierte en una planta una vez que ya no lo necesites. Creatividad que cuida el planeta.','Made from sustainable wood, it turns into a plant once you no longer need it. Creativity that cares for the planet.','125 €','5d4b436e-04c0-4bb5-9d0f-eec1365291da'],
+      ['M092','Identificador Ecológico · pack 100','Eco lanyard · pack of 100','Identificador ecológico perfecto para cualquier evento, tratando nuestro planeta de la forma más correcta.','An eco-friendly lanyard, perfect for any event, treating our planet the right way.','130 €','5b8cbfaa-51e2-4a15-a8a0-032c99e56ea5'],
+      ['M070','Tarjetero · pack 100','Card holder · pack of 100','De acero inoxidable de alta calidad: diseño elegante, protección y un perfil delgado y ligero.','High-quality stainless steel: elegant design, protection and a slim, lightweight profile.','145 €','01092a9d-02fa-40b8-bfa3-f33486a0544d'],
+      ['M061','Portafolios de madera · pack 20','Wooden portfolio · pack of 20','Diseño y durabilidad para transportar tus documentos con distinción y profesionalismo.','Design and durability to carry your documents with distinction and professionalism.','216 €','15a1310f-7cd0-4465-8ab8-16c636aee070'],
+      ['M042','Llavero de madera · pack 50','Wooden keyring · pack of 50','Madera 100% sostenible: ligero, resistente y único, con un acabado que resalta la belleza natural.','100% sustainable wood: light, sturdy and unique, with a finish that highlights its natural beauty.','180 €','7adc4080-5ea6-499e-9b05-32edc303683a'],
+      ['M071','Soporte móvil · pack 50','Phone stand · pack of 50','Soporte elegante y funcional de madera natural, una solución práctica y ecológica para tu espacio de trabajo.','An elegant, functional natural-wood stand, a practical and eco-friendly solution for your workspace.','245 €','25d27001-816a-4638-af14-c518c7835d70'],
+      ['M091','Velas Eco · pack 100','Eco candles · pack of 100','Elaboradas con cera natural de soja o de abejas, en envases reutilizables.','Made with natural soy or beeswax, in reusable containers.','140 €','a45adf3f-6246-4f0d-b028-9e3af0f772bd'],
+      ['M036','Maleta','Suitcase','Maleta sostenible que combina funcionalidad y respeto por el medio ambiente.','A sustainable suitcase that combines functionality and respect for the environment.','135,00 €','2851d15f-b557-4da8-8670-9cc0c7bfa5a9']
+    ];
+    const seed = '<svg viewBox="0 0 80 60" width="46" fill="none" style="margin-bottom:8px"><line x1="40" y1="58" x2="40" y2="22" stroke="currentColor" stroke-width="1.4"/><g stroke="currentColor" stroke-width="1"><line x1="40" y1="22" x2="28" y2="8"/><line x1="40" y1="22" x2="36" y2="4"/><line x1="40" y1="22" x2="44" y2="4"/><line x1="40" y1="22" x2="52" y2="8"/></g><g fill="currentColor"><circle cx="28" cy="8" r="1.6"/><circle cx="36" cy="4" r="1.6"/><circle cx="44" cy="4" r="1.6"/><circle cx="52" cy="8" r="1.6"/></g></svg>';
+    const grid = document.getElementById('rbp-prod-grid');
+    if (grid) {
+      products.forEach((p, i) => {
+        const a = document.createElement('article');
+        a.style.cssText = 'background:#fff;border:1px solid #d8e1ec;border-radius:14px;overflow:hidden;display:flex;flex-direction:column';
+        a.setAttribute('data-reveal', '');
+        a.setAttribute('data-delay', String((i % 4) * 80));
+        a.innerHTML =
+          '<div style="aspect-ratio:1/1;position:relative;background:linear-gradient(140deg,#1c3a5e,#2d5481);overflow:hidden">' +
+            '<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(255,255,255,.72)">' + seed + '<b style="font-size:.72rem;letter-spacing:.16em">' + p[0] + '</b></div>' +
+            '<img src="img/producto-' + p[0] + '.webp" alt="' + p[1] + '" loading="lazy" onerror="this.style.display=\'none\'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .4s">' +
+          '</div>' +
+          '<div style="padding:16px 16px 18px;display:flex;flex-direction:column;flex:1">' +
+            '<span style="font-size:.66rem;letter-spacing:.14em;color:#5e80aa;font-weight:700">' + p[0] + '</span>' +
+            '<h3 data-en="' + p[2] + '" style="font-size:1rem;color:#16314f;margin:4px 0 6px;line-height:1.25;font-weight:700">' + p[1] + '</h3>' +
+            '<p data-en="' + p[4] + '" style="color:#6b7e95;font-size:.82rem;margin-bottom:12px;flex:1">' + p[3] + '</p>' +
+            '<div style="font-family:\'Playfair Display\',serif;font-weight:800;color:#1c3a5e;font-size:1.2rem;margin-bottom:10px">' + p[5] + '</div>' +
+            '<a href="https://buybuttons.sefed.es/buybuttons/es01rbp0315/btn/' + p[6] + '/" target="_blank" rel="noopener" data-en="Add to cart" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#1c3a5e;color:#fff;border-radius:9px;padding:10px;font-weight:600;font-size:.82rem;transition:background .2s">Añadir al carrito</a>' +
+          '</div>';
+        const img = a.querySelector('img');
+        a.addEventListener('mouseenter', () => { a.style.transform = 'translateY(-5px)'; a.style.boxShadow = '0 20px 40px rgba(28,58,94,.13)'; a.style.borderColor = 'transparent'; if (img) img.style.transform = 'scale(1.06)'; });
+        a.addEventListener('mouseleave', () => { a.style.transform = 'none'; a.style.boxShadow = 'none'; a.style.borderColor = '#d8e1ec'; if (img) img.style.transform = 'none'; });
+        a.style.transition = 'transform .3s,box-shadow .3s,border-color .3s';
+        grid.appendChild(a);
+      });
+    }
+
+    /* ---- bilingual ES/EN ---- */
+    const nodes = root.querySelectorAll('[data-en]');
+    const phNodes = root.querySelectorAll('[data-en-ph]');
+    const label = document.getElementById('rbp-lang-label');
+    let lang = 'es';
+    try { lang = localStorage.getItem('rbp-lang') || 'es'; } catch (e) {}
+    const apply = (l) => {
+      nodes.forEach(n => { if (!n.hasAttribute('data-es')) n.setAttribute('data-es', n.innerHTML); n.innerHTML = l === 'en' ? n.getAttribute('data-en') : n.getAttribute('data-es'); });
+      phNodes.forEach(n => { if (!n.hasAttribute('data-es-ph')) n.setAttribute('data-es-ph', n.getAttribute('placeholder') || ''); n.setAttribute('placeholder', l === 'en' ? n.getAttribute('data-en-ph') : n.getAttribute('data-es-ph')); });
+      if (label) label.textContent = l === 'en' ? 'ES' : 'EN';
+      try { document.documentElement.lang = l; } catch (e) {}
+      try { localStorage.setItem('rbp-lang', l); } catch (e) {}
+    };
+    apply(lang);
+    const btn = document.getElementById('rbp-lang');
+    if (btn) btn.addEventListener('click', () => { lang = lang === 'es' ? 'en' : 'es'; apply(lang); });
+
+    /* ---- sticky header ---- */
+    const header = document.getElementById('rbp-header');
+    const onScrollHeader = () => {
+      if (!header) return;
+      if (scrollY > 40) { header.style.background = 'rgba(28,58,94,.92)'; header.style.backdropFilter = 'saturate(140%) blur(10px)'; header.style.boxShadow = '0 6px 30px rgba(19,42,71,.22)'; }
+      else { header.style.background = 'rgba(28,58,94,0)'; header.style.backdropFilter = 'none'; header.style.boxShadow = 'none'; }
+    };
+    onScrollHeader();
+    addEventListener('scroll', onScrollHeader, { passive: true });
+
+    /* ---- reveals (re-query to include injected products) ---- */
+    const reveals = root.querySelectorAll('[data-reveal]');
+    reveals.forEach(el => {
+      if (reduce) return;
+      const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+      el.style.opacity = '0'; el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity .7s cubic-bezier(.22,.61,.36,1) ' + d + 'ms, transform .7s cubic-bezier(.22,.61,.36,1) ' + d + 'ms, box-shadow .3s, border-color .3s';
+    });
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((ents) => { ents.forEach(x => { if (x.isIntersecting) { x.target.style.opacity = '1'; x.target.style.transform = 'none'; io.unobserve(x.target); } }); }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
+      reveals.forEach(el => io.observe(el));
+    }
+
+    /* ---- parallax ---- */
+    const shapes = root.querySelectorAll('[data-parallax]');
+    let ticking = false;
+    const parallax = () => { const y = scrollY; shapes.forEach(s => { const sp = parseFloat(s.getAttribute('data-parallax')) || 0.2; s.style.transform = 'translateY(' + (y * sp * -1) + 'px)'; }); ticking = false; };
+    if (!reduce) { addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(parallax); ticking = true; } }, { passive: true }); parallax(); }
+
+    /* ---- subscribe form ---- */
+    const sub = document.getElementById('rbp-sub');
+    if (sub) sub.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = sub.querySelector('input[type=email]');
+      const email = (input && input.value || '').trim();
+      const b = sub.querySelector('button');
+      let KEY = '';
+      try { const m = await import('./rbp-config.js'); KEY = (m.WEB3FORMS_KEY || '').trim(); } catch (e2) {}
+      const mailtoFallback = () => {
+        const subject = encodeURIComponent(lang === 'en' ? 'Newsletter sign-up' : 'Alta en la newsletter');
+        const body = encodeURIComponent((lang === 'en' ? 'I would like to subscribe with: ' : 'Quiero suscribirme con el correo: ') + email);
+        window.location.href = 'mailto:riberpublic.sefed@gmail.com?subject=' + subject + '&body=' + body;
+      };
+      if (KEY) {
+        if (b) { b.disabled = true; b.textContent = lang === 'en' ? 'Sending…' : 'Enviando…'; }
+        try {
+          const fd = new FormData();
+          fd.append('access_key', KEY);
+          fd.append('email', email);
+          fd.append('subject', 'Nueva suscripción — Riberpublic');
+          fd.append('from_name', 'Riberpublic · Newsletter');
+          const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd });
+          const d = await r.json();
+          if (!d || !d.success) throw new Error();
+          sub.reset();
+          if (b) { b.disabled = false; b.textContent = lang === 'en' ? 'Subscribed!' : '¡Suscrito!'; }
+        } catch (e3) {
+          if (b) { b.disabled = false; b.textContent = lang === 'en' ? 'Subscribe' : 'Suscribirme'; }
+          mailtoFallback();
+        }
+      } else { mailtoFallback(); if (b) b.textContent = lang === 'en' ? 'Opening email…' : 'Abriendo correo…'; }
+    });
+  }
+}
+</script>
+</body>
+</html>

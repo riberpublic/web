@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Manrope",system-ui,sans-serif;color:#16314f;background:#fbfcfe;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+@keyframes rbp-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+@keyframes rbp-float-b{0%,100%{transform:translateY(0)}50%{transform:translateY(16px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:860px){
+  #rbp-header > div{height:64px !important}
+  #rbp-header nav{display:none !important}
+  #rbp-header a[href="tienda.html"]{display:none !important}
+  #rbp-mnav-btn{display:inline-flex !important}
+  #rbp-root [style*="grid-template-columns"]{grid-template-columns:1fr !important}
+  #rbp-root [data-stack]{flex-direction:column !important;align-items:stretch !important}
+}
+@media(min-width:861px){#rbp-mnav{display:none !important}}
+</style>
+</helmet>
+<div id="rbp-root" style="position:relative">
+
+<header id="rbp-header" style="position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(28,58,94,0);transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:78px;color:#fff">
+    <a href="index.html" aria-label="Riberpublic SLS" style="display:flex;align-items:center"><img src="img/logo.png" alt="Riberpublic SLS" style="height:42px;width:auto;display:block"></a>
+    <nav><ul style="display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0">
+      <li><a href="index.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="Home">Inicio</a></li>
+      <li><a href="nosotros.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="About">Nosotros</a></li>
+      
+      <li><a href="rsc.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="CSR">RSC</a></li>
+      <li><a href="blog.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:.85;transition:opacity .2s" style-hover="opacity:1" data-en="Blog">Blog</a></li>
+      <li><a href="contacto.html" style="font-size:.82rem;font-weight:600;letter-spacing:.03em;color:#fff;opacity:1;transition:opacity .2s" data-en="Contact">Contacto</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <button id="rbp-lang" aria-label="Cambiar idioma" style="display:inline-flex;align-items:center;gap:6px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.06);border-radius:40px;padding:7px 14px;font-family:inherit;font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#fff;cursor:pointer;transition:.25s" style-hover="background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.7)"><span style="width:7px;height:7px;border-radius:50%;background:#e7b53c;display:inline-block"></span><span id="rbp-lang-label">EN</span></button>
+      <a href="tienda.html" style="border:1.5px solid rgba(255,255,255,.55);border-radius:40px;padding:9px 22px;font-size:.82rem;font-weight:600;color:#fff;transition:.25s" style-hover="background:#fff;color:#1c3a5e;border-color:#fff" data-en="Shop">Tienda</a>
+    </div>
+  </div>
+</header>
+
+<section style="position:relative;color:#fff;overflow:hidden;padding:160px 0 80px;background:radial-gradient(120% 130% at 82% 8%,rgba(94,128,170,.4),transparent 55%),linear-gradient(135deg,#132a47,#1c3a5e 55%,#2d5481)">
+  <div style="position:absolute;top:0;left:0;width:220px;height:220px;background:linear-gradient(135deg,#5a47b8,transparent 70%);opacity:.5;clip-path:polygon(0 0,100% 0,0 100%);pointer-events:none"></div>
+  <div data-parallax="0.22" style="position:absolute;top:40px;right:8%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(90,71,184,.55),transparent 70%);filter:blur(8px);animation:rbp-float 9s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 24px">
+    <span data-reveal style="display:inline-block;font-weight:600;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#9db6d4;border:1px solid rgba(157,182,212,.4);border-radius:40px;padding:7px 16px" data-en="Contact">Contacto</span>
+    <h1 data-reveal data-delay="90" style="font-family:'Playfair Display',Georgia,serif;font-weight:800;letter-spacing:-.01em;font-size:clamp(2.4rem,6vw,3.9rem);margin:18px 0 14px;line-height:1.05" data-en="We'd love to hear from you">Queremos saber de ti</h1>
+    <p data-reveal data-delay="180" style="color:#d6e0ee;max-width:62ch;font-size:1.06rem" data-en="If you have a question, want to know more about our products and services, or would like to collaborate with us, don't hesitate to write! The only limit is your imagination, and we're here to help you explore it.">Si tienes alguna pregunta, quieres saber más sobre nuestros productos y servicios, o deseas colaborar con nosotros, ¡no dudes en escribirnos! El único límite es la extensión de tu imaginación, y estamos aquí para ayudarte a explorarlo.</p>
+    <div data-reveal data-delay="240" style="font-size:.78rem;color:#9db6d4;margin-top:22px;letter-spacing:.03em"><a href="index.html" style="color:#cfe0f2" data-en="Home">Inicio</a> · <span data-en="Contact">Contacto</span></div>
+  </div>
+</section>
+
+<section style="padding:90px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div data-reveal>
+      <div style="margin-bottom:26px"><h4 style="font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#5e80aa;margin-bottom:8px" data-en="Email">Correo</h4><p style="color:#42566e;font-size:1rem;line-height:1.7"><a href="mailto:riberpublic.sefed@gmail.com" style="color:#1c3a5e;font-weight:600" style-hover="color:#5e80aa">riberpublic.sefed@gmail.com</a></p></div>
+      <div style="margin-bottom:26px"><h4 style="font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#5e80aa;margin-bottom:8px" data-en="Phone">Teléfono</h4><p style="color:#42566e;font-size:1rem;line-height:1.7"><a href="tel:983260716" style="color:#42566e" style-hover="color:#5e80aa">983 260 716</a></p></div>
+      <div style="margin-bottom:26px"><h4 style="font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#5e80aa;margin-bottom:8px" data-en="Address">Dirección</h4><p style="color:#42566e;font-size:1rem;line-height:1.7">Mirabel, 25<br><span data-en="47010 Valladolid, Spain">47010 Valladolid, España</span></p></div>
+      <div style="margin-bottom:26px"><h4 style="font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#5e80aa;margin-bottom:8px" data-en="Opening hours">Horario de apertura</h4>
+        <table style="width:100%;border-collapse:collapse">
+          <tr><td style="padding:9px 0;border-bottom:1px solid #d8e1ec;font-size:.94rem;color:#42566e" data-en="Monday – Friday">Lunes – Viernes</td><td style="padding:9px 0;border-bottom:1px solid #d8e1ec;font-size:.94rem;color:#6b7e95;text-align:right">9:00 – 17:00</td></tr>
+          <tr><td style="padding:9px 0;border-bottom:1px solid #d8e1ec;font-size:.94rem;color:#42566e" data-en="Saturday">Sábado</td><td style="padding:9px 0;border-bottom:1px solid #d8e1ec;font-size:.94rem;color:#6b7e95;text-align:right" data-en="Closed">Cerrado</td></tr>
+          <tr><td style="padding:9px 0;border-bottom:1px solid #d8e1ec;font-size:.94rem;color:#42566e" data-en="Sunday">Domingo</td><td style="padding:9px 0;border-bottom:1px solid #d8e1ec;font-size:.94rem;color:#6b7e95;text-align:right" data-en="Closed">Cerrado</td></tr>
+        </table>
+      </div>
+    </div>
+    <div data-reveal data-delay="120" style="background:#fff;border:1px solid #d8e1ec;border-radius:18px;padding:32px;box-shadow:0 18px 44px rgba(28,58,94,.07)">
+      <h3 id="rbp-form-title" style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;margin-bottom:18px;color:#16314f" data-en="Write to us">Escríbenos</h3>
+      <form id="rbp-contact">
+        <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
+        <label for="n" style="display:block;font-size:.8rem;font-weight:600;color:#16314f;margin:0 0 6px" data-en="Name (required)">Nombre (obligatorio)</label>
+        <input id="n" name="nombre" type="text" required placeholder="Tu nombre" data-en-ph="Your name" style="width:100%;border:1px solid #d8e1ec;border-radius:10px;padding:13px 14px;font-family:inherit;font-size:.95rem;margin-bottom:18px;background:#fbfcfe" style-focus="outline:2px solid #5e80aa;border-color:transparent">
+        <label for="e" style="display:block;font-size:.8rem;font-weight:600;color:#16314f;margin:0 0 6px" data-en="Email (required)">Correo electrónico (obligatorio)</label>
+        <input id="e" name="correo" type="email" required placeholder="tucorreo@ejemplo.com" data-en-ph="youremail@example.com" style="width:100%;border:1px solid #d8e1ec;border-radius:10px;padding:13px 14px;font-family:inherit;font-size:.95rem;margin-bottom:18px;background:#fbfcfe" style-focus="outline:2px solid #5e80aa;border-color:transparent">
+        <label for="m" style="display:block;font-size:.8rem;font-weight:600;color:#16314f;margin:0 0 6px" data-en="Message">Mensaje</label>
+        <textarea id="m" name="mensaje" required placeholder="¿En qué podemos ayudarte?" data-en-ph="How can we help you?" style="width:100%;border:1px solid #d8e1ec;border-radius:10px;padding:13px 14px;font-family:inherit;font-size:.95rem;margin-bottom:18px;background:#fbfcfe;min-height:130px;resize:vertical" style-focus="outline:2px solid #5e80aa;border-color:transparent"></textarea>
+        <button type="submit" style="width:100%;justify-content:center;display:inline-flex;align-items:center;gap:9px;border-radius:44px;padding:14px 30px;font-weight:600;font-size:.92rem;background:#1c3a5e;color:#fff;border:0;cursor:pointer;transition:background .25s,transform .2s" style-hover="background:#2d5481;transform:translateY(-2px)" data-en="Send message">Enviar mensaje</button>
+        <p id="rbp-formerror" style="font-size:.9rem;color:#c0392b;margin-top:14px;display:none;font-weight:600" data-en="Couldn’t send. Please try again or email us directly.">No se pudo enviar. Inténtalo de nuevo o escríbenos directamente.</p>
+        <p id="rbp-formnote" style="font-size:.92rem;color:#2e7d52;margin-top:14px;display:none;font-weight:600" data-en="Thanks! Your email app is opening with your message ready to send. ✨">¡Gracias! Se está abriendo tu correo con el mensaje listo para enviar. ✨</p>
+        <p style="font-size:.8rem;color:#9aa9bc;margin-top:14px;line-height:1.5" data-en="Your details are only used to reply to you. We never share them with third parties.">Tus datos solo se usan para responderte. No los compartimos con terceros.</p>
+      </form>
+      <div id="rbp-success" style="display:none;text-align:center;padding:34px 8px">
+        <div style="width:62px;height:62px;border-radius:50%;background:#eaf3ee;color:#2e7d52;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:30px;font-family:'Playfair Display',serif">✓</div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:#16314f;margin-bottom:8px" data-en="Message sent!">¡Mensaje enviado!</h3>
+        <p style="color:#6b7e95;font-size:.96rem;line-height:1.6;max-width:340px;margin:0 auto" data-en="Thanks for writing to us. We’ll get back to you as soon as possible.">Gracias por escribirnos. Te responderemos lo antes posible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#132a47;color:#cfdbea">
+  <div style="padding:70px 0 38px">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:40px">
+      <div>
+        <img src="img/logo.png" alt="Riberpublic SLS" style="height:46px;margin-bottom:18px">
+        <p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#cfe0f2;font-size:1.05rem;margin-bottom:10px" data-en="«Leave a mark without leaving waste»">«Deja huella sin dejar residuos»</p>
+        <p style="font-size:.9rem;color:#bcccde;line-height:1.85;max-width:34ch" data-en="We are a simulated merchandising company. IES Ribera de Castilla. SEFED project.">Somos una empresa simulada de venta de merchandising. IES Ribera de Castilla. Proyecto SEFED.</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9db6d4;margin-bottom:18px" data-en="Navigation">Navegación</h4>
+        <ul style="list-style:none">
+          <li><a href="nosotros.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="About">Nosotros</a></li>
+          <li><a href="tienda.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="Shop">Tienda online</a></li>
+          <li><a href="rsc.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="CSR">RSC</a></li>
+          <li><a href="blog.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff">Blog</a></li>
+          <li><a href="contacto.html" style="font-size:.9rem;color:#bcccde;line-height:1.95;transition:color .2s" style-hover="color:#fff" data-en="Contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9db6d4;margin-bottom:18px" data-en="Contact">Contacto</h4>
+        <p style="font-size:.9rem;color:#bcccde;line-height:1.95;word-break:break-word"><a href="mailto:riberpublic.sefed@gmail.com" style="color:#fff;font-weight:600" style-hover="color:#9db6d4">riberpublic.sefed@gmail.com</a><br><a href="tel:983260716" style="color:#bcccde">983 260 716</a><br>Mirabel, 25<br>47010 Valladolid</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9db6d4;margin-bottom:18px" data-en="Subscribe">Suscríbete</h4>
+        <p style="font-size:.9rem;color:#bcccde;line-height:1.85" data-en="News and catalogue in your inbox.">Novedades y catálogo en tu correo.</p>
+        <form id="rbp-sub" style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
+          <input type="email" name="correo" required placeholder="Tu correo electrónico…" data-en-ph="Your email…" aria-label="Correo" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:13px 15px;color:#fff;font-family:inherit;font-size:.9rem">
+          <button type="submit" style="background:#fff;color:#1c3a5e;border:0;border-radius:10px;padding:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:.2s" style-hover="background:#5e80aa;color:#fff" data-en="Subscribe">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.1);padding:22px 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;font-size:.8rem;color:#8fa6c1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <span data-en="© 2026 Riberpublic SLS · Simulated company SEFED">© 2026 Riberpublic SLS · Empresa simulada SEFED</span>
+      <span><a href="index.html" style="color:#bcccde">riberpublic.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accessKey&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('rbp-root');
+    if (!root) return;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---- mobile nav (responsive) ---- */
+    (function () {
+      const row = document.querySelector('#rbp-header > div');
+      if (!row) return;
+      const actions = row.lastElementChild;
+      const burger = document.createElement('button');
+      burger.id = 'rbp-mnav-btn';
+      burger.setAttribute('aria-label', 'Menú');
+      burger.style.cssText = 'display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);border-radius:12px;color:#fff;cursor:pointer;flex:none';
+      burger.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
+      if (actions) actions.appendChild(burger);
+      const ov = document.createElement('div');
+      ov.id = 'rbp-mnav';
+      ov.style.cssText = 'position:fixed;inset:0;z-index:80;background:rgba(11,22,38,.98);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:none;flex-direction:column;padding:22px 24px';
+      const links = [['index.html', 'Inicio', 'Home'], ['nosotros.html', 'Nosotros', 'About'], ['rsc.html', 'RSC', 'CSR'], ['blog.html', 'Blog', 'Blog'], ['contacto.html', 'Contacto', 'Contact'], ['tienda.html', 'Tienda', 'Shop']];
+      ov.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;height:54px">'
+        + '<img src="img/logo.png" alt="Riberpublic" style="height:38px;width:auto">'
+        + '<button id="rbp-mnav-close" aria-label="Cerrar" style="width:42px;height:42px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);border-radius:12px;color:#fff;cursor:pointer;font-size:20px;line-height:1">\u2715</button></div>'
+        + '<nav style="display:flex;flex-direction:column;margin-top:24px">'
+        + links.map(function (l) { return '<a href="' + l[0] + '" data-en="' + l[2] + '" style="color:#fff;font-family:\'Playfair Display\',Georgia,serif;font-weight:700;font-size:1.55rem;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)">' + l[1] + '</a>'; }).join('')
+        + '</nav>';
+      root.appendChild(ov);
+      const closeMnav = function () { ov.style.display = 'none'; document.body.style.overflow = ''; };
+      burger.addEventListener('click', function () { ov.style.display = 'flex'; document.body.style.overflow = 'hidden'; });
+      const mc = ov.querySelector('#rbp-mnav-close');
+      if (mc) mc.addEventListener('click', closeMnav);
+      ov.querySelectorAll('nav a').forEach(function (a) { a.addEventListener('click', closeMnav); });
+    })();
+
+    /* ---- bilingual ES/EN ---- */
+    const nodes = root.querySelectorAll('[data-en]');
+    const phNodes = root.querySelectorAll('[data-en-ph]');
+    const label = document.getElementById('rbp-lang-label');
+    let lang = 'es';
+    try { lang = localStorage.getItem('rbp-lang') || 'es'; } catch (e) {}
+    const apply = (l) => {
+      nodes.forEach(n => {
+        if (!n.hasAttribute('data-es')) n.setAttribute('data-es', n.innerHTML);
+        n.innerHTML = l === 'en' ? n.getAttribute('data-en') : n.getAttribute('data-es');
+      });
+      phNodes.forEach(n => {
+        if (!n.hasAttribute('data-es-ph')) n.setAttribute('data-es-ph', n.getAttribute('placeholder') || '');
+        n.setAttribute('placeholder', l === 'en' ? n.getAttribute('data-en-ph') : n.getAttribute('data-es-ph'));
+      });
+      if (label) label.textContent = l === 'en' ? 'ES' : 'EN';
+      try { document.documentElement.lang = l; } catch (e) {}
+      try { localStorage.setItem('rbp-lang', l); } catch (e) {}
+    };
+    apply(lang);
+    const btn = document.getElementById('rbp-lang');
+    if (btn) btn.addEventListener('click', () => { lang = lang === 'es' ? 'en' : 'es'; apply(lang); });
+
+    /* ---- sticky header bg ---- */
+    const header = document.getElementById('rbp-header');
+    const onScrollHeader = () => {
+      if (!header) return;
+      if (scrollY > 40) {
+        header.style.background = 'rgba(28,58,94,.92)';
+        header.style.backdropFilter = 'saturate(140%) blur(10px)';
+        header.style.boxShadow = '0 6px 30px rgba(19,42,71,.22)';
+      } else {
+        header.style.background = 'rgba(28,58,94,0)';
+        header.style.backdropFilter = 'none';
+        header.style.boxShadow = 'none';
+      }
+    };
+    onScrollHeader();
+    addEventListener('scroll', onScrollHeader, { passive: true });
+
+    /* ---- scroll reveals ---- */
+    const reveals = root.querySelectorAll('[data-reveal]');
+    reveals.forEach(el => {
+      if (reduce) return;
+      const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity .75s cubic-bezier(.22,.61,.36,1) ' + d + 'ms, transform .75s cubic-bezier(.22,.61,.36,1) ' + d + 'ms';
+    });
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((ents) => {
+        ents.forEach(x => { if (x.isIntersecting) { x.target.style.opacity = '1'; x.target.style.transform = 'none'; io.unobserve(x.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(el => io.observe(el));
+    }
+
+    /* ---- parallax ---- */
+    const shapes = root.querySelectorAll('[data-parallax]');
+    let ticking = false;
+    const parallax = () => {
+      const y = scrollY;
+      shapes.forEach(s => { const sp = parseFloat(s.getAttribute('data-parallax')) || 0.2; s.style.transform = 'translateY(' + (y * sp * -1) + 'px)'; });
+      ticking = false;
+    };
+    if (!reduce) { addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(parallax); ticking = true; } }, { passive: true }); parallax(); }
+
+    /* ---- contact form via Web3Forms (free, no backend) — mailto fallback if no key ---- */
+    const ACCESS_KEY = ((this.props && this.props.accessKey) || '').trim();
+    let RBP_CFG_KEY = '';
+    import('./rbp-config.js').then(m => { RBP_CFG_KEY = (m.WEB3FORMS_KEY || '').trim(); }).catch(() => {});
+    const CONTACT_EMAIL = 'riberpublic.sefed@gmail.com';
+    const cform = document.getElementById('rbp-contact');
+    const successBox = document.getElementById('rbp-success');
+    const errNote = document.getElementById('rbp-formerror');
+    const okNote = document.getElementById('rbp-formnote');
+    const formTitle = document.getElementById('rbp-form-title');
+    const showSuccess = () => {
+      if (cform) cform.style.display = 'none';
+      if (formTitle) formTitle.style.display = 'none';
+      if (successBox) { successBox.style.display = 'block'; apply(lang); }
+    };
+    if (cform) cform.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (cform.querySelector('[name=nombre]').value || '').trim();
+      const email = (cform.querySelector('[name=correo]').value || '').trim();
+      const msg = (cform.querySelector('[name=mensaje]').value || '').trim();
+      const btn = cform.querySelector('button[type=submit]');
+      if (errNote) errNote.style.display = 'none';
+      const key = ACCESS_KEY || RBP_CFG_KEY;
+      if (key) {
+        const data = new FormData(cform);
+        data.append('access_key', key);
+        data.append('subject', (lang === 'en' ? 'New website enquiry — ' : 'Nueva consulta web — ') + name);
+        data.append('from_name', 'Riberpublic · Web');
+        if (btn) { btn.disabled = true; btn.style.opacity = '.6'; btn.textContent = lang === 'en' ? 'Sending…' : 'Enviando…'; }
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
+          .then(r => r.json())
+          .then(d => { if (d && d.success) { showSuccess(); } else { throw new Error(); } })
+          .catch(() => {
+            if (btn) { btn.disabled = false; btn.style.opacity = '1'; btn.textContent = lang === 'en' ? 'Send message' : 'Enviar mensaje'; }
+            if (errNote) errNote.style.display = 'block';
+          });
+      } else {
+        const subject = encodeURIComponent((lang === 'en' ? 'Website enquiry — ' : 'Consulta web — ') + name);
+        const body = encodeURIComponent((lang === 'en' ? 'Name: ' : 'Nombre: ') + name + '\n' + (lang === 'en' ? 'Email: ' : 'Correo: ') + email + '\n\n' + msg);
+        window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+        if (okNote) okNote.style.display = 'block';
+      }
+    });
+
+    /* ---- real subscribe form via mailto ---- */
+    const sub = document.getElementById('rbp-sub');
+    if (sub) sub.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = sub.querySelector('input[type=email]');
+      const email = (input && input.value || '').trim();
+      const b = sub.querySelector('button');
+      const KEY = ACCESS_KEY || RBP_CFG_KEY;
+      const mailtoFallback = () => {
+        const subject = encodeURIComponent(lang === 'en' ? 'Newsletter sign-up' : 'Alta en la newsletter');
+        const body = encodeURIComponent((lang === 'en' ? 'I would like to subscribe with: ' : 'Quiero suscribirme con el correo: ') + email);
+        window.location.href = 'mailto:riberpublic.sefed@gmail.com?subject=' + subject + '&body=' + body;
+      };
+      if (KEY) {
+        if (b) { b.disabled = true; b.textContent = lang === 'en' ? 'Sending…' : 'Enviando…'; }
+        try {
+          const fd = new FormData();
+          fd.append('access_key', KEY);
+          fd.append('email', email);
+          fd.append('subject', 'Nueva suscripción — Riberpublic');
+          fd.append('from_name', 'Riberpublic · Newsletter');
+          const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd });
+          const d = await r.json();
+          if (!d || !d.success) throw new Error();
+          sub.reset();
+          if (b) { b.disabled = false; b.textContent = lang === 'en' ? 'Subscribed!' : '¡Suscrito!'; }
+        } catch (e3) {
+          if (b) { b.disabled = false; b.textContent = lang === 'en' ? 'Subscribe' : 'Suscribirme'; }
+          mailtoFallback();
+        }
+      } else { mailtoFallback(); if (b) b.textContent = lang === 'en' ? 'Opening email…' : 'Abriendo correo…'; }
+    });
+  }
+}
+</script>
+</body>
+</html>
